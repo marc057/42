@@ -6,7 +6,7 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 13:14:30 by mcolomba          #+#    #+#             */
-/*   Updated: 2022/09/23 14:14:49 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/09/23 14:44:58 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memcpy(void *dest, const void *src,
 		aux_src++;
 		n--;
 	}
+	return (dest);
 }
 
 // TODO: checkout restrict keyword
