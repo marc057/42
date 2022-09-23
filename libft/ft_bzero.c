@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 19:51:58 by mcolomba          #+#    #+#             */
-/*   Updated: 2022/09/22 13:22:34 by mcolomba         ###   ########.fr       */
+/*   Created: 2022/09/21 19:00:07 by marcos            #+#    #+#             */
+/*   Updated: 2022/09/22 13:13:09 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+void	ft_bzero(void *s, unsigned int n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	unsigned char	*aux;
+
+	aux = s;
+	while (n > 0)
+	{
+		*aux = 0;
+		aux++;
+		n--;
+	}	
 }

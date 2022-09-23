@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 19:51:58 by mcolomba          #+#    #+#             */
+/*   Created: 2022/09/21 18:21:59 by marcos            #+#    #+#             */
 /*   Updated: 2022/09/22 13:22:34 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_strlen(char *str)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	int	length;
+
+	length = 0;
+	while (str[length])
+		length++;
+	return (length);
 }
