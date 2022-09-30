@@ -6,7 +6,13 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 14:20:01 by mcolomba          #+#    #+#             */
-/*   Updated: 2022/09/23 14:44:58 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/09/27 14:21:34 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
