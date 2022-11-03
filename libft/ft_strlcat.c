@@ -6,26 +6,34 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 14:19:42 by mcolomba          #+#    #+#             */
-/*   Updated: 2022/09/23 14:44:58 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:12:20 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, const char *src,
-					unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	char			*aux_dest;
-	const char		*aux_src;
-	unsigned int	destlen;
+	size_t	i;
+	size_t	j;
+	char	*pt_src;
 
-	aux_dest = dest;
-	aux_src = src;
-	while (size != 0 && *aux_dest != 0)
+	pt_src = (char *)src;
+	i = 0;
+	while (i < size && *dest)
 	{
-		aux_dest++;
-		size--;
+		dest++;
+		i++;
 	}
-	destlen = aux_dest;
-	// TODO: Complete code
+	if (i == size)
+		return (i + ft_strlen(src));
+	j = 0;
+	while (pt_src[j])
+	{
+		if (j < size - i - 1)
+			*dest++ = pt_src[j];
+		j++;
+	}
+	*dest = 0;
+	return (j + i);
 }
-
-// TODO: Checkout register

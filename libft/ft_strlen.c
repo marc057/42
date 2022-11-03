@@ -6,13 +6,15 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:21:59 by marcos            #+#    #+#             */
-/*   Updated: 2022/09/22 13:22:34 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:09:31 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	while (str[length])

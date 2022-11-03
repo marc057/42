@@ -6,11 +6,13 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:00:07 by marcos            #+#    #+#             */
-/*   Updated: 2022/09/22 13:13:09 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:17:38 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, unsigned int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*aux;
 

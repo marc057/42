@@ -6,13 +6,15 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:18:16 by marcos            #+#    #+#             */
-/*   Updated: 2022/10/24 12:50:31 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/11/03 12:49:34 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if (c >= '!' && c <= '~')
-		return (1);
-	return (0);
+	if (c < 32 || c > 126)
+		return (0);
+	return (1);
 }

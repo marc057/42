@@ -6,13 +6,13 @@
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:00:07 by mcolomba          #+#    #+#             */
-/*   Updated: 2022/09/27 14:23:24 by mcolomba         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:34:45 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isspace(char c);
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
