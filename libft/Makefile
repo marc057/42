@@ -2,6 +2,8 @@
 
 CC=cc
 NAME=libft.a
+SO=libft.o
+OTHER=a.out libft.h.gch
 CFLAGS=-Wall -Wextra -Werror
 OPTIONS=-c -fPIC
 SRC=ft_mem*.c ft_str*.c ft_to*.c ft_is*.c ft_atoi.c ft_bzero.c ft_calloc.c main.c
@@ -20,7 +22,7 @@ clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME) libft.so
+	rm -f $(NAME) $(SO) $(OTHER)
 
 re: fclean all 
 
@@ -29,6 +31,6 @@ bonus: $(BONUS)
 	ar -crs $(NAME) $(OBJ)
 
 so: $(OBJ)
-	gcc -shared -o libft.so $(OBJ)
+	gcc -shared -o $(SO) $(OBJ)
 
 .PHONY: clean fclean all re bonus so

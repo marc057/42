@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcolomba <mcolomba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 14:19:38 by mcolomba          #+#    #+#             */
-/*   Updated: 2022/11/03 13:54:59 by mcolomba         ###   ########.fr       */
+/*   Created: 2022/11/14 13:34:58 by mcolomba          #+#    #+#             */
+/*   Updated: 2022/11/14 13:54:03 by mcolomba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*cpy;
-	char	*aux_str;
-	size_t	len;
-	int		i;
+	unsigned char	*aux_src;
+	unsigned char	*aux_dest;
+	char			found;
 
-	aux_str = (char *) str;
-	len = ft_strlen(str);
-	cpy = (char *) malloc(len + 1);
-	if (cpy == NULL)
+	if (dest == NULL && src == NULL)
 		return (NULL);
-	i = 0;
-	while (aux_str[i] != 0)
+
+	aux_src = (unsigned char *)src;
+	aux_dest = (unsigned char *)dest;
+	found = 0;
+	while (n > 0 && !found)
 	{
-		cpy[i] = aux_str[i];
-		i++;
+		if (*aux_src == (unsigned char) c)
+			found = 1;
+		*aux_dest = *aux_src;
+		aux_dest++;
+		aux_src++;
+		n--;
 	}
-	cpy[i] = 0;
-	return (cpy);
+	if (!found)
+		return (NULL);
+	return (aux_dest);
 }
